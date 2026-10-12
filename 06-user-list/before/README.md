@@ -1,20 +1,19 @@
-# Before Getting Started
+# React + Vite
 
-If you want you can open the `app.html` file in your browser to see what the final version of this application should look like. Your application should match the output exactly to what the `app.html` file renders.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**BONUS:** If you decide to do the bonus loading section you can view the `loading.html` file for an example of what the page should look like while loading.
+Currently, two official plugins are available:
 
-If the API we use in this video is unavailable, or different in anyway to what I show in the video you can use the `users.json` file as an alternative to the API. If you place the `users.json` file in the `public` folder of your project you can fetch it by running `fetch("users.json")` in your code.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-# Instructions
+## React Compiler
 
-1. Fetch all users from the API (https://jsonplaceholder.typicode.com/users) in your App.jsx file using `useEffect`.
-2. Render an `h1` that says **User List** and below that a `ul` containing a list of all users. This is a perfect use case for fragments since we don't want to wrap it in an extra div.
-3. The users in the list should be in their own component and that component should take a `name` prop and return the `name` inside an `li` element.
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-## Bonus
+Note: This will impact Vite dev & build performances.
+You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
 
-1. Add a loading state that will display the text `Loading...` instead of the user list while it is being downloaded from the API.
-   - You can use your dev tools to throttle your network speed to more easily test the loading. Go to the **Network** tab, click the **No Throttling** drop down and choose **Slow 3G**.
-2. Add an error state that will display the text `Error fetching users` and the error message if the API request fails.
-   - You can test this by changing the URL in the `fetch` call to a URL that is not valid (such as https://jsonplaceholder.typicode.com/users-invalid).
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
