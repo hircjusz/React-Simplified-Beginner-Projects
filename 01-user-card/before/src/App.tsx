@@ -1,3 +1,5 @@
+import { Counter } from "./Counter"
+import { CounterClass } from "./CounterClass"
 import "./user.css"
 import user from "./user.json"
 import UserCard from "./UserCard"
@@ -19,8 +21,12 @@ function App() {
         phoneNumber={user.phoneNumber}
         address={user.address}
       />
+      <br/>
+      <Counter />
+       <br/>
+      <CounterClass />
     </div>
-
+    
   )
 }
 
