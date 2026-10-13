@@ -3,11 +3,29 @@ import React from "react"
 export class Child extends React.Component {
   constructor() {
     super()
+    console.log("Render")
     this.state = {
       age: 0,
       name: "",
     }
   }
+
+  componentDidMount() {
+    console.log("Component Did Mount")
+  } 
+
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.name !== this.state.name) {
+    clearTimeout(this.timeout)
+    this.timeout = setTimeout(() => {
+      console.log(`My name is ${this.state.name}`)
+    }, 1000)
+  }
+}
+
+componentWillUnmount() {
+  clearTimeout(this.timeout)   // cleanup so it doesn't fire after unmount
+}
 
   render() {
     return (
