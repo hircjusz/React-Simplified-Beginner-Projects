@@ -1,18 +1,19 @@
-# Before Getting Started
+# React + Vite
 
-If you want you can open the `app.html` file in your browser to see what the final version of this application should look like. Your application should match the output exactly to what the `app.html` file renders.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-You may notice I included things like ids, data-attributes, class selectors, etc in the HTML. All these should be included in the final version of this project as the CSS uses them all. This is there to ensure you understand how to set HTML attributes in React.
+Currently, two official plugins are available:
 
-This project will also be one of the first projects where the instructions I give you will be very vague on implementation details. It is up to you to figure out the best way to implement each task. This will also more closely resemble working on projects in the real world.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-# Instructions
+## React Compiler
 
-1. Add the ability to add todos with an input and a button which adds the todo when clicked. These todos should show up in a list above the input.
-    * You can use a form for this if you want, but there are some quirks with forms in React that we cover later in the course so it is probably best just to not use a form for now.
-2. Add the ability to mark a todo as complete by clicking on the checkbox or label for the todo.
-3. Add a delete button next to each todo item in the list which will remove the todo when clicked.
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-## Bonus
+Note: This will impact Vite dev & build performances.
+You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
 
-1. The easiest way to create this project is to just put all the HTML/data into one single component. This works fine for this project since it is so small, but with larger projects is not ideal. The bonus for this project is to break up your project so that each todo item in the list is rendered as a separate component from your `App.jsx` component.
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
