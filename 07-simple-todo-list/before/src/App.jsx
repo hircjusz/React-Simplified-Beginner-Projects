@@ -1,5 +1,6 @@
 import "./styles.css"
 import { useState } from "react"
+import { TodoItem } from "./TodoItem"
 function App() {
 
   const [newTodoName, setNewTodo] = useState("")
@@ -31,6 +32,7 @@ function App() {
         {todos.map(todo => {
           return (
             <TodoItem
+              key={todo.id}
               id={todo.id}
               name={todo.name}
               completed={todo.completed}
@@ -42,7 +44,7 @@ function App() {
       </ul>
 
       <div id="new-todo-form">
-        <label for="todo-input">New Todo</label>
+        <label htmlFor="todo-input">New Todo</label>
         <input type="text" id="todo-input" value={newTodoName} onChange={(e) => setNewTodo(e.target.value)} />
         <button onClick={addNewTodo}>Add Todo</button>
       </div>
