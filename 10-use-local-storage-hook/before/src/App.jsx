@@ -9,10 +9,10 @@ function App() {
   })
 
   // Bonus:
-  // const [hobbies, setHobbies] = useLocalStorage("HOBBIES", [
-  //   "Programming",
-  //   "Weight Lifting",
-  // ])
+  const [hobbies, setHobbies] = useLocalStorage("HOBBIES", [
+    "Programming",
+    "Weight Lifting",
+  ])
 
   return (
     <>
@@ -50,14 +50,14 @@ function App() {
       </div>
 
       {/* Bonus: */}
-      {/* <div>{hobbies.join(", ")}</div>
+      <div>{hobbies.join(", ")}</div>
       <button
         onClick={() =>
           setHobbies(currentHobbies => [...currentHobbies, "New Hobby"])
         }
       >
         Add Hobby
-      </button> */}
+      </button>
     </>
   )
 }
