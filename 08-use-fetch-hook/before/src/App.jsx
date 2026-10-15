@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useFetch } from "./useFetch"
 
 // If the API does not work use these local URLs
 // const URLS = {
@@ -14,18 +15,18 @@ const URLS = {
 }
 
 // BONUS:
-// const OPTIONS = {
-//   method: "POST",
-//   body: JSON.stringify({ name: "Kyle" }),
-//   headers: {
-//     "Content-type": "application/json",
-//   },
-// }
+const OPTIONS = {
+  method: "POST",
+  body: JSON.stringify({ name: "Kyle" }),
+  headers: {
+    "Content-type": "application/json",
+  },
+}
 
 function App() {
   const [url, setUrl] = useState(URLS.USERS)
 
-  const { data, error, status } = useFetch(url)
+  const { data, error, status } = useFetch(url, OPTIONS)
   // BONUS:
   // const { data, error, status } = useFetch(url, OPTIONS)
 
